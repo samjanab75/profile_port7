@@ -1,45 +1,36 @@
-# Samjana Portfolio
+# Samjana Portfolio — Multi-page version
 
-A responsive water-pink personal portfolio built with React, Vite, Tailwind CSS, Flowbite React, and Lucide icons.
+Responsive personal portfolio using React, Vite, Tailwind CSS, Flowbite React, Lucide icons, and React Router.
 
 ## Run locally
-
-1. Install Node.js LTS from https://nodejs.org/
-2. Extract this ZIP and open the `samjana-portfolio` folder in VS Code.
-3. Open Terminal > New Terminal.
-4. Run:
-
+1. Extract the ZIP.
+2. Open the `samjana-portfolio` folder in VS Code.
+3. Open a terminal in that folder and run:
    ```bash
    npm install
    npm run dev
    ```
+4. Open the local URL printed in the terminal.
 
-5. Open the local URL shown in your terminal (usually http://localhost:5173).
+## Pages
+- `/` — Home and profile card
+- `/about` — About me
+- `/experience` — Work experience
+- `/skills` — Technical skills and languages
+- `/projects` — Project cards
+- `/education` — Education, certificates and achievements
+- `/contact` — Contact form
 
-Before publishing, replace the three example project URLs in `src/data/portfolioData.js`, add your own project screenshots to `public/`, and add your resume as `public/resume.pdf` if you want the resume button to work.
+Navigation items now open separate pages instead of scrolling to sections.
 
-## Build
+## Customize before publishing
+- Edit personal details, skills and project details in `src/data/portfolioData.js`.
+- Add `public/profile.jpg` for your own profile photo.
+- Add `public/resume.pdf` for the resume download button.
+- Replace the three sample project URLs and descriptions with your real project links.
+- Run `npm run build` to test the production build.
 
-```bash
-npm run build
-npm run preview
-```
+## Deploy
+Push the folder to GitHub, import the repository at https://vercel.com/, and deploy with Vite defaults.
 
-## Deploy to Vercel
-
-1. Push this folder to a GitHub repository.
-2. Go to https://vercel.com/ and import the repository.
-3. Keep the default Vite settings and deploy.
-4. For visitor analytics, enable Web Analytics in the Vercel project and redeploy if prompted.
-
-## Personal data and privacy
-
-The template intentionally shows Chennai rather than a full home address. Consider keeping your full residential address private. Analytics can show aggregate visits and traffic information, not automatically identify the real-world identity of each visitor.
-
-## Customize
-
-- Profile, education, experience, skills, projects and certificates: `src/data/portfolioData.js`
-- Main layout: `src/App.jsx`
-- Colors and styles: `src/index.css` and `tailwind.config.js`
-- Put profile image at `public/profile.jpg` (optional)
-- Put project images at `public/project-one.svg`, `public/project-two.svg`, and `public/project-three.svg` (sample placeholders are included)
+Vercel Analytics is included. Enable Web Analytics in your Vercel project to view aggregate visit statistics; it does not automatically identify each visitor by name.

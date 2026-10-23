@@ -1,38 +1,40 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { Menu, X, Sparkles } from "lucide-react";
+import { useState } from "react";
 
 const links = [
-  ["About", "#about"],
-  ["Experience", "#experience"],
-  ["Skills", "#skills"],
-  ["Projects", "#projects"],
-  ["Education", "#education"],
-  ["Contact", "#contact"],
+  ["Home", "/"],
+  ["About", "/about"],
+  ["Experience", "/experience"],
+  ["Skills", "/skills"],
+  ["Projects", "/projects"],
+  ["Education", "/education"],
+  ["Contact", "/contact"],
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
+  const close = () => setOpen(false);
   return (
     <header className="navbar-wrap">
       <nav className="navbar container" aria-label="Main navigation">
-        <a className="brand" href="#home" onClick={() => setOpen(false)}>
+        <NavLink className="brand" to="/" onClick={close}>
           <span className="brand-mark"><Sparkles size={18} /></span>
           <span>Samjana<span className="brand-dot">.</span></span>
-        </a>
+        </NavLink>
         <div className="desktop-nav">
-          {links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
+          {links.map(([label, to]) => (
+            <NavLink key={to} to={to} end={to === "/"} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>{label}</NavLink>
+          ))}
         </div>
-        <a className="nav-cta" href="#contact">Let’s connect <span>↗</span></a>
+        <NavLink className="nav-cta" to="/contact" onClick={close}>Let’s connect <span>↗</span></NavLink>
         <button className="mobile-menu" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"}>
           {open ? <X /> : <Menu />}
         </button>
       </nav>
-      {open && (
-        <div className="mobile-nav container">
-          {links.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
-        </div>
-      )}
+      {open && <div className="mobile-nav container">
+        {links.map(([label, to]) => <NavLink key={to} to={to} end={to === "/"} onClick={close} className={({ isActive }) => isActive ? "active" : ""}>{label}</NavLink>)}
+      </div>}
     </header>
   );
 }
