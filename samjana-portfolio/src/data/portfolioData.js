@@ -54,26 +54,31 @@ export const languages = ["English", "Hindi", "Tamil"];
 
 // Replace the sample titles and empty URLs with your real project details.
 export const projects = [
-  {
-    id: 1,
-    title: "Project One",
-    category: "Web Application",
-    description: "Add a short explanation of the problem your first project solves and the features you built.",
-    technologies: ["React", "Tailwind CSS", "JavaScript"],
-    liveUrl: "",
-    githubUrl: "",
-    image: "/project-one.svg",
-  },
-  {
-    id: 2,
-    title: "Project Two",
-    category: "Frontend Project",
-    description: "Describe your second project, the key interaction, and what you learned while building it.",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
-    liveUrl: "",
-    githubUrl: "",
-    image: "/project-two.svg",
-  },
+{
+  id: 1,
+  title: "Quick Xerox Booking",
+  category: "Web Development",
+  description:
+    "A Xerox service website designed to simplify the photocopying process and provide users with a convenient online experience.",
+  image: "/project-one.svg",
+  technologies: ["React", "JavaScript", "CSS", "Vercel"],
+  liveUrl:
+    "https://quick-xerox-cqyn1up8b-samjanab75-2178s-projects.vercel.app/",
+  githubUrl: "",
+},
+  
+{
+  id: 2,
+  title: "React Interview Study Site",
+  category: "React Development",
+  description:
+    "An interactive learning website designed to help learners prepare for React and JavaScript interviews. Explore interview study materials and strengthen your frontend development knowledge.",
+  image: "/project-two.svg",
+  technologies: ["React", "JavaScript", "Vite", "CSS", "Vercel"],
+  liveUrl: "https://react-interview-study-site.vercel.app/",
+  githubUrl: "https://github.com/samjanab75/React_Interview_Study_Site",
+},
+
   {
     id: 3,
     title: "Project Three",
