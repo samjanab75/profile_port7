@@ -15,8 +15,8 @@ import { profile, about, education, experience, skillGroups, languages, projects
 function Footer() {
   return <footer className="footer"><div className="container footer-inner">
     <Link className="brand" to="/"><span className="brand-mark"><Sparkles size={17}/></span><span>Samjana<span className="brand-dot">.</span></span></Link>
-    <p>Made with curiosity, care, and a little water pink.</p><Link to="/" className="back-top">Back to home ↑</Link>
-  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Samjana Bhandari D.</span><span>Designed for growth · Built with React</span></div></footer>;
+    <p>Made with curiosity</p><Link to="/" className="back-top">Back to home ↑</Link>
+  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Samjana Bhandari D</span><span>Designed for growth</span></div></footer>;
 }
 function Layout({ children }) {
   const location = useLocation();
@@ -26,11 +26,11 @@ function Home() {
   return <>
     <section className="hero container">
       <div className="hero-copy">
-        <div className="hero-kicker"><span className="kicker-line"/> PERSONAL PORTFOLIO <span className="kicker-star">✳</span></div>
-        <h1>Technology-minded.<br/><span>People-focused.</span><br/>Always learning.</h1>
-        <p className="hero-intro">Hello, I’m Samjana — an IT postgraduate interested in building thoughtful web experiences and making technology easier to learn.</p>
+        <div className="hero-kicker"><span className="kicker-line"/>WEB DEVELOPER <span className="kicker-star">✳</span></div>
+        <h1>My journey is about staying<br/><span>curious and becoming </span><br/> better version of myself every day</h1>
+        <p className="hero-intro">I’m Samjana — an IT postgraduate Exploring the power of technology to design meaningful digital experiences</p>
         <div className="hero-actions"><Link to="/projects" className="button button-primary">Explore my work <ArrowUpRight size={17}/></Link><Link to="/about" className="button button-outline">About me <ArrowRight size={16}/></Link></div>
-        <div className="hero-proof"><div className="proof-icon"><Code2 size={18}/></div><div><strong>Build · Learn · Teach</strong><span>Web development · Technology education</span></div></div>
+        <div className="hero-proof"><div className="proof-icon"><Code2 size={18}/></div><div><strong>LEARN · BUILD · INSPIRE</strong><span> It's short, memorable, and reflects your passion for development, continuous learning,and sharing knowledge with others.</span></div></div>
       </div>
       <div className="hero-card-area"><div className="hero-orbit"/><ProfileCard profile={profile}/><div className="floating-note note-one"><Sparkles size={16}/><span>Thoughtful by design</span></div><div className="floating-note note-two"><Heart size={16}/><span>Code · Create · Teach</span></div></div>
     </section>
@@ -72,14 +72,14 @@ function Projects() {
   return <section className="section projects-section"><div className="container page-content"><SectionHeading eyebrow="SELECTED WORK" title="Projects, ideas made real." description="A space for web development practice, personal builds, and future full-stack projects."/>
     <div className="project-filter">{categories.map(c=><button key={c} onClick={()=>setFilter(c)} className={filter===c?"filter-button active":"filter-button"}>{c}</button>)}</div>
     <div className="projects-grid">{shown.map(p=><ProjectCard key={p.id} project={p}/>)}</div>
-    <p className="projects-hint"><Sparkles size={16}/> Replace the sample project details with your real Vercel and GitHub links in <code>src/data/portfolioData.js</code>.</p>
+    <p className="projects-hint"><Sparkles size={16}/>  <code> </code>.</p>
     <div className="page-next"><span>Next: education and achievements</span><Link to="/education" className="button button-outline">Education <ArrowRight size={16}/></Link></div>
   </div></section>;
 }
 function Education() {
   return <section className="section container page-content"><SectionHeading eyebrow="ACADEMIC FOUNDATION" title="Learning is a lifelong practice." description="My academic background and dedicated space for future milestones."/>
     <div className="education-layout"><div className="education-list">{education.map((e,i)=><article className="education-card" key={e.degree}><div className="education-icon"><GraduationCap size={22}/></div><div className="education-info"><span className="education-date">{e.date}</span><h3>{e.degree}</h3><p>{e.institution}</p><small>{e.location}</small></div><span className="education-number">0{i+1}</span></article>)}</div>
-      <div className="future-grid"><article className="future-card"><div className="future-card-icon"><Award size={22}/></div><p className="eyebrow">COMING SOON</p><h3>Certificates</h3><p>Add certificates, course completions, workshops, and professional learning milestones here.</p><span className="future-empty">{certificates.length?`${certificates.length} certificates added`:"Your next achievement belongs here."}</span></article>
+      <div className="future-grid"><article className="future-card"><div className="future-card-icon"><Award size={22}/></div><p className="eyebrow">COMING SOON</p><h3>Certificates</h3><p> </p><span className="future-empty">{certificates.length?`${certificates.length} certificates added`:" "}</span></article>
       <article className="future-card future-card-alt"><div className="future-card-icon"><Sparkles size={22}/></div><p className="eyebrow">MILESTONES</p><h3>Achievements</h3><p>Reserve this area for awards, presentations, teaching experience, and project outcomes.</p><span className="future-empty">{achievements.length?`${achievements.length} achievements added`:"Space for future accomplishments."}</span></article></div></div>
     <div className="page-next"><span>Have a question or opportunity?</span><Link to="/contact" className="button button-primary">Contact me <ArrowRight size={16}/></Link></div>
   </section>;

@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Samjana Bhandari D.",
+  name: "Samjana Bhandari D",
   headline: "IT Postgraduate · Aspiring Developer · Future Educator",
   location: "Chennai, Tamil Nadu, India",
   email: "samjanab75@gmail.com",
@@ -51,8 +51,7 @@ export const skillGroups = [
 ];
 
 export const languages = ["English", "Hindi", "Tamil"];
-
-// Replace the sample titles and empty URLs with your real project details.
+ 
 export const projects = [
 {
   id: 1,
@@ -60,11 +59,11 @@ export const projects = [
   category: "Web Development",
   description:
     "A Xerox service website designed to simplify the photocopying process and provide users with a convenient online experience.",
-  image: "/project-one.svg",
-  technologies: ["React", "JavaScript", "CSS", "Vercel"],
+  image: "/project-one.jpg",
+  technologies: ["Html", "JavaScript", "CSS", "Tailwind css"],
   liveUrl:
     "https://quick-xerox-cqyn1up8b-samjanab75-2178s-projects.vercel.app/",
-  githubUrl: "",
+  githubUrl: "https://github.com/samjanab75/QuickXerox",
 },
   
 {
@@ -73,7 +72,7 @@ export const projects = [
   category: "React Development",
   description:
     "An interactive learning website designed to help learners prepare for React and JavaScript interviews. Explore interview study materials and strengthen your frontend development knowledge.",
-  image: "/project-two.svg",
+  image: "/project-two.jpg",
   technologies: ["React", "JavaScript", "Vite", "CSS", "Vercel"],
   liveUrl: "https://react-interview-study-site.vercel.app/",
   githubUrl: "https://github.com/samjanab75/React_Interview_Study_Site",
